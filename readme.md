@@ -39,7 +39,7 @@ Here’s a sneak peek of the **early wireframe**:
    ```bash
    git clone https://github.com/your-username/campuscode.git
    cd campuscode
-```
+   
 2.Open the project
     Just open index.html in your browser to preview the site.
 
@@ -51,4 +51,30 @@ Here’s a sneak peek of the **early wireframe**:
 
    Commit changes 💡
 
-    Make a pull request 🚀
+   Make a pull request 🚀
+
+🤝 Contributing
+
+We welcome student contributors from all backgrounds.
+You can help by:
+
+Reporting issues 🐞
+
+Suggesting features 💡
+
+Improving UI/UX 🎨
+
+Adding more resources 📚
+
+Check out our CONTRIBUTING.md
+ for details.
+
+📢 Community
+
+Be part of our journey 🚀
+
+Share ideas
+
+Connect with peers
+
+Build & learn together
