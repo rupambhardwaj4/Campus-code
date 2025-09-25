@@ -15,12 +15,10 @@ Our vision is to make coding **fun, social, and accessible** for students everyw
 
 ---
 
+
 ## 🖼️ UI Preview  
 
-Here’s a sneak peek of the **early wireframe**:  
-
-![CampusCode Wireframe](./wireframe.png)  
-*(Replace this with actual screenshots once the UI is ready)*  
+👉 [View Wireframe on Excalidraw](https://excalidraw.com/#json=rGEmn13TMqaVI0_AR4XDD,SIFMWuVLbfh98lU9-ANjhQ)  
 
 ---
 
