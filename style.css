@@ -100,6 +100,10 @@ a {
 a:hover {
   color: var(--primary-color);
 }
+/* This is the hover effect for DARK mode */
+body.dark .feature-card:hover {
+  box-shadow: 0 0 25px var(--accent-color); /* Glow effect */
+}
 
 /* Header */
 .header {
@@ -243,13 +247,28 @@ a:hover {
   border-radius: 999px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Hover effect */
 .login-btn:hover {
-  background-color: var(--primary-color);
+  background-color: var(--accent-color-hover, #0056d2); /* fallback if no hover variable */
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
+/* Active (click) effect */
+.login-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Focus (keyboard accessibility) */
+.login-btn:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
 /* Social Login Buttons */
 .social-btn {
   width: 100%;
@@ -310,6 +329,33 @@ a:hover {
   border-color: var(--accent-color);
   box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
 }
+.btn-login {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-login:hover {
+  background-color: var(--accent-color-hover, #0056d2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-login:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn-login:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
 
 /* Links */
 .forgot-pass {
@@ -362,6 +408,13 @@ a:hover {
   font-weight: 300;
   color: #e5e7eb;
 }
+.brand-highlight {
+  color: #16d7f4; /* A vibrant, bright yellow-green */
+  text-shadow: 0 0 8px rgba(170, 255, 0, 0.7); /* A subtle glow effect */
+}
+.typing {
+  color: yellow;
+}
 
 /* Features Section */
 .features-section {
@@ -401,42 +454,63 @@ a:hover {
 }
 
 /* Main Content */
+/* Style the main content area */
 .main {
-  padding: 8rem 5% 5rem;
+  padding: 4rem 2rem; /* Add space around the cards */
 }
 
+/* Update the content wrapper to only handle layout */
 .content {
   display: flex;
-  justify-content: center;
-  gap: 3rem;
-  flex-wrap: wrap;
+  gap: 2rem; /* This creates the space between your two cards */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the content area */
 }
 
-.opportunity,
+/* NEW: Apply identical card styles to both roadmap and course */
+.roadmap,
 .course {
+  flex: 1; /* This is the key: makes both boxes take up equal space */
   background-color: var(--card-bg);
   padding: 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  flex: 1;
-  min-width: 300px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.opportunity h2,
-.course h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--dark-text);
-  border-bottom: 2px solid var(--secondary-color);
-  padding-bottom: 1rem;
+/* Keep your specific styles for the content inside each card */
+.roadmap h2 {
+  font-size: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-.opportunity p {
-  line-height: 1.8;
+.roadmap a {
+  display: block;
   color: var(--light-text);
+  padding: 0.75rem 0;
+  font-size: 1rem;
+  transition: color 0.2s ease-in-out;
 }
 
+.roadmap a:hover {
+  color: var(--primary-color);
+}
+
+.course h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.course-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
 /* Course Section Styling */
 .course h2 {
   text-align: center;
@@ -535,4 +609,106 @@ footer {
 .footer-bottom p {
   font-size: 0.8rem;
   color: #9ca3af;
+}
+
+/* ======================================================= */
+/* ========== RESPONSIVE DESIGN (MEDIA QUERIES) ========== */
+/* ======================================================= */
+
+/* For Tablets and Smaller Desktops (less than 992px) */
+@media (max-width: 992px) {
+  /* --- General Spacing & Typography --- */
+  .header {
+    padding: 1rem 2rem;
+  }
+
+  .main {
+    padding: 3rem 1.5rem;
+  }
+  
+  .hero {
+    padding: 6rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  /* --- Main Content Layout --- */
+  .content {
+    flex-direction: column; /* Stack roadmap and course cards */
+  }
+
+  /* --- Footer Layout --- */
+  .footer-col {
+    flex-basis: 45%; /* Create a two-column footer layout */
+  }
+}
+
+
+/* For Mobile Phones (less than 768px) */
+@media (max-width: 768px) {
+  /* --- Header Layout --- */
+  .header {
+    flex-direction: column; /* Stack all header items */
+    gap: 1rem;
+  }
+
+  .search {
+    width: 100%;
+    order: 3; /* Move search to the bottom */
+  }
+  
+  .nav ul {
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* --- Features Section --- */
+  .features-section {
+    margin-top: -4rem; /* Reduce overlap */
+    padding: 0 1rem;
+  }
+
+  .feature-card {
+    width: 100%; /* Make feature cards full-width */
+  }
+
+  /* --- Footer Layout --- */
+  .footer-container {
+    text-align: center;
+  }
+  .footer-col {
+    flex-basis: 100%; /* Stack all footer columns */
+  }
+  .social-links {
+    justify-content: center;
+    display: flex;
+  }
+}
+
+
+/* For Small Mobile Phones (less than 576px) */
+@media (max-width: 576px) {
+    /* --- Typography --- */
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+
+    /* --- Spacing --- */
+    .main {
+      padding: 2rem 1rem;
+    }
+
+    .roadmap, .course, .feature-card {
+      padding: 1.5rem;
+    }
 }
