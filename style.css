@@ -1,13 +1,19 @@
 /* Color Palette & Variables */
 :root {
-  --primary-color: #5b21b6; /* A deep purple */
-  --secondary-color: #c4b5fd; /* A lighter, complementary purple */
-  --accent-color: #8b5cf6; /* A mid-tone purple for buttons/highlights */
-  --dark-text: #1f2937; /* Dark gray for main text */
-  --light-text: #6b7280; /* Lighter gray for secondary text */
-  --bg-light: #f9fafb; /* Off-white background */
+  --primary-color: #0d47a1;
+  /* Deep, professional blue */
+  --secondary-color: #e3f2fd;
+  /* Very light, airy blue */
+  --accent-color: #00acc1;
+  /* Vibrant cyan/teal for highlights */
+  --dark-text: #263238;
+  /* Dark slate gray for text */
+  --light-text: #546e7a;
+  /* Lighter slate gray */
+  --bg-light: #f8f9fa;
+  /* Clean off-white background */
   --card-bg: #ffffff;
-  --border-color: #e5e7eb;
+  --border-color: #dee2e6;
 }
 
 /* General Body and Typography */
@@ -23,8 +29,10 @@ body {
 
 /* Dark Mode Styles (Applied when body has the .dark class) */
 body.dark {
-  background-color: #1f2937; /* Dark gray background */
-  color: #f9fafb; /* Off-white text */
+  background-color: #1f2937;
+  /* Dark gray background */
+  color: #f9fafb;
+  /* Off-white text */
 }
 
 /* You would also add .dark styles for other elements like cards, headers, etc. */
@@ -32,17 +40,23 @@ body.dark .card {
   background-color: #2d3748;
   color: #e5e7eb;
 }
+
 /* ============================================= */
 /* ========== DARK THEME STYLES ========== */
 /* ============================================= */
 
 body.dark {
   /* 1. Redefine the root variables for dark mode */
-  --bg-light: #111827;         /* Dark blue-gray background */
-  --card-bg: #1f2937;          /* Lighter dark shade for cards */
-  --dark-text: #f9fafb;        /* Light text (was the light background) */
-  --light-text: #9ca3af;       /* Grayer text for secondary info */
-  --border-color: #374151;     /* Darker border color */
+  --bg-light: #111827;
+  /* Dark blue-gray background */
+  --card-bg: #1f2937;
+  /* Lighter dark shade for cards */
+  --dark-text: #f9fafb;
+  /* Light text (was the light background) */
+  --light-text: #9ca3af;
+  /* Grayer text for secondary info */
+  --border-color: #374151;
+  /* Darker border color */
 }
 
 /* 2. Specific overrides for elements that need them */
@@ -54,7 +68,11 @@ body.dark .opportunity,
 body.dark .course,
 body.dark .search-overlay {
   background-color: var(--card-bg);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Slightly adjust shadow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  /* Slightly adjust shadow */
+}
+body.dark .feature-card h2 {
+  color: var(--accent-color); /* Use a bright accent color */
 }
 
 /* Style the search input for dark mode */
@@ -66,7 +84,8 @@ body.dark .search input {
 
 /* Invert the footer colors */
 body.dark footer {
-  background-color: #111827; /* A very dark background for the footer */
+  background-color: #111827;
+  /* A very dark background for the footer */
   color: #9ca3af;
 }
 
@@ -100,9 +119,11 @@ a {
 a:hover {
   color: var(--primary-color);
 }
+
 /* This is the hover effect for DARK mode */
 body.dark .feature-card:hover {
-  box-shadow: 0 0 25px var(--accent-color); /* Glow effect */
+  box-shadow: 0 0 25px var(--accent-color);
+  /* Glow effect */
 }
 
 /* Header */
@@ -116,7 +137,8 @@ body.dark .feature-card:hover {
 }
 
 .logo img {
-  height: 60px; /* Reduced logo size for a cleaner header */
+  height: 60px;
+  /* Reduced logo size for a cleaner header */
   object-fit: contain;
 }
 
@@ -129,7 +151,8 @@ body.dark .feature-card:hover {
   width: 100%;
   padding: 0.75rem 1rem;
   border: 1px solid var(--border-color);
-  border-radius: 999px; /* Fully rounded pill shape */
+  border-radius: 999px;
+  /* Fully rounded pill shape */
   font-size: 1rem;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
@@ -137,12 +160,15 @@ body.dark .feature-card:hover {
 .search input:focus {
   outline: none;
   border-color: var(--accent-color);
-  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2); /* A nice, subtle focus ring */
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+  /* A nice, subtle focus ring */
 }
 
 .search-overlay {
-  top: 120%; /* Adjusted for better spacing */
-  width: calc(100% + 10px); /* Slightly wider than the input */
+  top: 120%;
+  /* Adjusted for better spacing */
+  width: calc(100% + 10px);
+  /* Slightly wider than the input */
   left: -5px;
   background-color: var(--card-bg);
   border-radius: 8px;
@@ -194,10 +220,11 @@ body.dark .feature-card:hover {
 .nav a:hover {
   color: var(--dark-text);
 }
+
 .login-modal {
   /* This is the most important part - it hides the modal by default */
-  display: none; 
-  
+  display: none;
+
   /* Keep your other styles for positioning, background, etc. */
   position: fixed;
   z-index: 1000;
@@ -206,10 +233,11 @@ body.dark .feature-card:hover {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
 }
+
 .login-card {
   display: flex;
   background-color: var(--card-bg);
@@ -217,11 +245,13 @@ body.dark .feature-card:hover {
   width: 90%;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  overflow: hidden; /* Important for keeping rounded corners */
+  overflow: hidden;
+  /* Important for keeping rounded corners */
 }
 
 .login-left {
-  flex-basis: 45%; /* Assign about 45% of the width to the left side */
+  flex-basis: 45%;
+  /* Assign about 45% of the width to the left side */
   padding: 3rem;
   background-color: var(--bg-light);
   text-align: center;
@@ -236,7 +266,8 @@ body.dark .feature-card:hover {
   padding: 3rem;
   display: flex;
   flex-direction: column;
-  position: relative; /* Needed for positioning the close button */
+  position: relative;
+  /* Needed for positioning the close button */
 }
 
 .login-btn {
@@ -252,7 +283,8 @@ body.dark .feature-card:hover {
 
 /* Hover effect */
 .login-btn:hover {
-  background-color: var(--accent-color-hover, #0056d2); /* fallback if no hover variable */
+  background-color: var(--accent-color-hover, #0056d2);
+  /* fallback if no hover variable */
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
@@ -303,7 +335,8 @@ body.dark .feature-card:hover {
   gap: 1rem;
 }
 
-.divider::before, .divider::after {
+.divider::before,
+.divider::after {
   content: '';
   flex-grow: 1;
   height: 1px;
@@ -314,7 +347,8 @@ body.dark .feature-card:hover {
 .login-right form {
   display: flex;
   flex-direction: column;
-  gap: 1rem; /* Adds space between form elements */
+  gap: 1rem;
+  /* Adds space between form elements */
 }
 
 .login-right input {
@@ -329,6 +363,7 @@ body.dark .feature-card:hover {
   border-color: var(--accent-color);
   box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
 }
+
 .btn-login {
   padding: 0.75rem 1.5rem;
   background-color: var(--accent-color);
@@ -362,6 +397,7 @@ body.dark .feature-card:hover {
   text-align: right;
   font-size: 0.9rem;
 }
+
 /* Close Button */
 .close {
   position: absolute;
@@ -384,7 +420,8 @@ body.dark .feature-card:hover {
   }
 
   .login-left {
-    display: none; /* Hides the image section on small screens for simplicity */
+    display: none;
+    /* Hides the image section on small screens for simplicity */
   }
 }
 
@@ -393,11 +430,13 @@ body.dark .feature-card:hover {
   text-align: center;
   padding: 8rem 2rem;
   background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  color: #fff; /* Changed text color to white for readability on the gradient */
+  color: #fff;
+  /* Changed text color to white for readability on the gradient */
 }
 
 .hero h1 {
-  font-size: 4rem; /* Larger, more impactful heading */
+  font-size: 4rem;
+  /* Larger, more impactful heading */
   font-weight: 700;
   margin-bottom: 1.5rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -408,12 +447,15 @@ body.dark .feature-card:hover {
   font-weight: 300;
   color: #e5e7eb;
 }
+
 .brand-highlight {
-  color: #16d7f4; /* A vibrant, bright yellow-green */
-  text-shadow: 0 0 8px rgba(170, 255, 0, 0.7); /* A subtle glow effect */
+   color: #00e5ff; /* Bright Aqua/Cyan */
+  text-shadow: 0 0 15px rgba(0, 229, 255, 0.7);
 }
+
 .typing {
-  color: yellow;
+ color: #ffee00; /* Vibrant Yellow */
+  font-weight: 500;
 }
 
 /* Features Section */
@@ -421,7 +463,8 @@ body.dark .feature-card:hover {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin-top: -6rem; /* A more pronounced overlap */
+  margin-top: -6rem;
+  /* A more pronounced overlap */
   position: relative;
   z-index: 2;
   flex-wrap: wrap;
@@ -453,25 +496,138 @@ body.dark .feature-card:hover {
   line-height: 1.6;
 }
 
+/* --- "Who's Using" Section --- */
+.who-is-using {
+  padding: 5rem 2rem;
+  text-align: center;
+  background-color: var(--bg-light);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--dark-text);
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.user-card {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.card-header h3 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  color: var(--dark-text);
+}
+
+.card-header p {
+  color: var(--light-text);
+  margin-bottom: 0;
+}
+
+.card-header img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* This is the key part for the animation */
+.card-details {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  max-height: 0; /* Hidden by default */
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out, margin-top 0.5s ease-out;
+}
+
+.card-details li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: var(--light-text);
+}
+
+.card-details i {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  width: 20px;
+  text-align: center;
+}
+
+/* This class will be toggled by JavaScript */
+.who-is-using.expanded .card-details {
+  max-height: 500px; /* Make it visible */
+  opacity: 1;
+  margin-top: 2rem;
+}
+
+.toggle-details-btn {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 3rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.toggle-details-btn i {
+  transition: transform 0.3s ease;
+}
+
+.who-is-using.expanded .toggle-details-btn i {
+  transform: rotate(180deg);
+}
+
 /* Main Content */
 /* Style the main content area */
 .main {
-  padding: 4rem 2rem; /* Add space around the cards */
+  padding: 4rem 2rem;
+  /* Add space around the cards */
 }
 
 /* Update the content wrapper to only handle layout */
 .content {
   display: flex;
-  gap: 2rem; /* This creates the space between your two cards */
+  gap: 2rem;
+  /* This creates the space between your two cards */
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto; /* Center the content area */
+  margin: 0 auto;
+  /* Center the content area */
 }
 
 /* NEW: Apply identical card styles to both roadmap and course */
 .roadmap,
 .course {
-  flex: 1; /* This is the key: makes both boxes take up equal space */
+  flex: 1;
+  /* This is the key: makes both boxes take up equal space */
   background-color: var(--card-bg);
   padding: 2.5rem;
   border-radius: 16px;
@@ -480,20 +636,53 @@ body.dark .feature-card:hover {
 
 /* Keep your specific styles for the content inside each card */
 .roadmap h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--primary-color);
 }
 
+/* Update the roadmap link style to align image and text */
 .roadmap a {
-  display: block;
+  display: flex;
+  /* Use flexbox for easy alignment */
+  align-items: center;
+  /* Vertically center the items */
+  gap: 1rem;
+  /* Add space between the image and text */
   color: var(--light-text);
   padding: 0.75rem 0;
   font-size: 1rem;
   transition: color 0.2s ease-in-out;
 }
 
+/* Style the new images inside the links */
+/* Rewritten roadmap link style for a more button-like feel */
+.roadmap a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  /* Added horizontal padding for a wider clickable area */
+  margin-bottom: 0.5rem;
+  /* Added space between each link */
+  border-radius: 8px;
+  /* Added rounded corners */
+  color: var(--light-text);
+  font-weight: 500;
+  /* Slightly bolder text */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+
+
+/* Enhanced hover effect with a background color change */
 .roadmap a:hover {
+  background-color: var(--secondary-color);
+  /* Light purple background on hover */
   color: var(--primary-color);
+  /* Darker purple text on hover */
 }
 
 .course h2 {
@@ -511,12 +700,20 @@ body.dark .feature-card:hover {
   gap: 1.5rem;
   margin-top: 2rem;
 }
+
 /* Course Section Styling */
+/* Styles the "Our Courses" heading */
 .course h2 {
   text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--primary-color);
 }
 
-.course-images {
+/* This is the container that holds all the logos */
+/* This is the container for all the logos */
+.icon-grid {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -524,20 +721,134 @@ body.dark .feature-card:hover {
   margin-top: 2rem;
 }
 
-.course img {
+/* Make the link a container for the overlay */
+.icon-grid a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+  /* Matches the image's border-radius */
+}
+
+/* This styles each individual logo image */
+.icon-grid img {
   width: 120px;
   height: 120px;
   object-fit: contain;
   padding: 15px;
   background-color: var(--bg-light);
   border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.course img:hover {
+/* Add a slight zoom to the image on hover */
+.icon-grid a:hover img {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the overlay div */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 26, 26, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  /* Hidden by default */
+  transition: opacity 0.3s ease;
+}
+
+/* Style for the title text inside the overlay */
+.overlay-title {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Show the overlay on hover */
+.icon-grid a:hover .overlay {
+  opacity: 1;
+  /* Make the overlay visible */
+}
+
+/* --- Locked Features Section --- */
+.locked-features {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+}
+
+.feature-item {
+  background-color: var(--card-bg);
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+.feature-item i {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+  font-size: 1.5rem;
+  color: var(--dark-text);
+  margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+  color: var(--light-text);
+  line-height: 1.6;
+}
+
+/* This is the key part for the "locked" effect */
+.feature-item.locked {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.feature-item.locked > * {
+  filter: blur(4px); /* Blur the icon, title, and text */
+  user-select: none; /* Prevent text selection */
+}
+
+/* Creates the overlay with the lock icon and message */
+.feature-item.locked::after {
+  content: '🔒 Login to Access';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--dark-text);
+}
+
+/* Dark mode adjustment for the overlay */
+body.dark .feature-item.locked::after {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
 }
 
 /* Footer */
@@ -617,6 +928,7 @@ footer {
 
 /* For Tablets and Smaller Desktops (less than 992px) */
 @media (max-width: 992px) {
+
   /* --- General Spacing & Typography --- */
   .header {
     padding: 1rem 2rem;
@@ -625,7 +937,7 @@ footer {
   .main {
     padding: 3rem 1.5rem;
   }
-  
+
   .hero {
     padding: 6rem 1rem;
   }
@@ -640,29 +952,34 @@ footer {
 
   /* --- Main Content Layout --- */
   .content {
-    flex-direction: column; /* Stack roadmap and course cards */
+    flex-direction: column;
+    /* Stack roadmap and course cards */
   }
 
   /* --- Footer Layout --- */
   .footer-col {
-    flex-basis: 45%; /* Create a two-column footer layout */
+    flex-basis: 45%;
+    /* Create a two-column footer layout */
   }
 }
 
 
 /* For Mobile Phones (less than 768px) */
 @media (max-width: 768px) {
+
   /* --- Header Layout --- */
   .header {
-    flex-direction: column; /* Stack all header items */
+    flex-direction: column;
+    /* Stack all header items */
     gap: 1rem;
   }
 
   .search {
     width: 100%;
-    order: 3; /* Move search to the bottom */
+    order: 3;
+    /* Move search to the bottom */
   }
-  
+
   .nav ul {
     gap: 1.5rem;
     justify-content: center;
@@ -671,21 +988,26 @@ footer {
 
   /* --- Features Section --- */
   .features-section {
-    margin-top: -4rem; /* Reduce overlap */
+    margin-top: -4rem;
+    /* Reduce overlap */
     padding: 0 1rem;
   }
 
   .feature-card {
-    width: 100%; /* Make feature cards full-width */
+    width: 100%;
+    /* Make feature cards full-width */
   }
 
   /* --- Footer Layout --- */
   .footer-container {
     text-align: center;
   }
+
   .footer-col {
-    flex-basis: 100%; /* Stack all footer columns */
+    flex-basis: 100%;
+    /* Stack all footer columns */
   }
+
   .social-links {
     justify-content: center;
     display: flex;
@@ -695,20 +1017,24 @@ footer {
 
 /* For Small Mobile Phones (less than 576px) */
 @media (max-width: 576px) {
-    /* --- Typography --- */
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-    .hero h2 {
-        font-size: 1.3rem;
-    }
 
-    /* --- Spacing --- */
-    .main {
-      padding: 2rem 1rem;
-    }
+  /* --- Typography --- */
+  .hero h1 {
+    font-size: 2.2rem;
+  }
 
-    .roadmap, .course, .feature-card {
-      padding: 1.5rem;
-    }
+  .hero h2 {
+    font-size: 1.3rem;
+  }
+
+  /* --- Spacing --- */
+  .main {
+    padding: 2rem 1rem;
+  }
+
+  .roadmap,
+  .course,
+  .feature-card {
+    padding: 1.5rem;
+  }
 }

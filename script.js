@@ -53,6 +53,23 @@ window.addEventListener("load",() =>{
     }
 })
 
+///-----who is using 
+/* --- "Know More" / "View Less" Toggle --- */
+const whoIsUsingSection = document.querySelector('.who-is-using');
+const toggleBtn = document.querySelector('.toggle-details-btn');
+
+toggleBtn.addEventListener('click', () => {
+  // Toggle the 'expanded' class on the main section
+  whoIsUsingSection.classList.toggle('expanded');
+
+  // Check if the section is now expanded and change the button text
+  if (whoIsUsingSection.classList.contains('expanded')) {
+    toggleBtn.innerHTML = 'View Less <i class="fas fa-chevron-up"></i>';
+  } else {
+    toggleBtn.innerHTML = 'Know More <i class="fas fa-chevron-down"></i>';
+  }
+});
+
 
 //--------login toggle-----
 

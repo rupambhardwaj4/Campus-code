@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Campus Code</title>
+  <!--favicon-->
+  <link rel="shortcut icon" href="assets/images/final_logo.png" type="image/x-icon">
+
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -32,7 +36,7 @@
       <nav>
         <ul>
           <li><a href="#hero">Home</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="#About">About</a></li>
           <li><a href="#">Services</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
@@ -84,7 +88,7 @@
   </div>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero" id="hero">
     <h1>Welcome to <span class="brand-highlight">Campus Code</span></h1>
     <h2>Ready to <span class="typing"></span></h2>
 
@@ -108,35 +112,186 @@
     </div>
   </section>
 
+  <!--about-->
+  <section class="who-is-using" id="About">
+  <h2 class="section-title">Who's using Campus Code?</h2>
+  
+  <div class="cards-container">
+    
+    <div class="user-card">
+      <div class="card-header">
+        <div class="card-info">
+          <h3>Students and Professionals</h3>
+          <p>Unlock Your Potential: Compete, Build Resume, Grow and get Hired!</p>
+        </div>
+        <img src="assets/images/student.png" alt="Student illustration">
+      </div>
+      <ul class="card-details">
+        <li><i class="fas fa-briefcase"></i> Access tailored jobs and internships</li>
+        <li><i class="fas fa-trophy"></i> Participate in exciting competitions</li>
+        <li><i class="fas fa-lightbulb"></i> Upskill with mentorships & workshops</li>
+        <li><i class="fas fa-user-tie"></i> Showcase your profile to top recruiters</li>
+      </ul>
+    </div>
+    
+    <div class="user-card">
+      <div class="card-header">
+        <div class="card-info">
+          <h3>Companies and Recruiters</h3>
+          <p>Discover Right Talent: Hire, Engage, and Brand Like Never Before!</p>
+        </div>
+        <img src="assets/images/recruiter.png" alt="Recruiter illustration">
+      </div>
+      <ul class="card-details">
+        <li><i class="fas fa-building"></i> Build employer brand with engagements</li>
+        <li><i class="fas fa-users"></i> Host jobs & internships to hire top talent</li>
+        <li><i class="fas fa-cogs"></i> Streamline hiring with AI-driven tools</li>
+        <li><i class="fas fa-link"></i> Connect with the best talent based on skills</li>
+      </ul>
+    </div>
+    
+    <div class="user-card">
+      <div class="card-header">
+        <div class="card-info">
+          <h3>Colleges</h3>
+          <p>Bridge Academia and Industry: Empower Students with Real-World Opportunities!</p>
+        </div>
+        <img src="assets/images/college.png" alt="College illustration">
+      </div>
+      <ul class="card-details">
+        <li><i class="fas fa-graduation-cap"></i> Offer top competition & job opportunities</li>
+        <li><i class="fas fa-handshake"></i> Partner with companies for placements</li>
+        <li><i class="fas fa-chart-line"></i> Gain insights into student performance</li>
+        <li><i class="fas fa-atom"></i> Foster industry-academic collaboration</li>
+      </ul>
+    </div>
+
+  </div>
+  
+  <button class="toggle-details-btn">Know More <i class="fas fa-chevron-down"></i></button>
+</section>
+
   <!-- Main Content -->
   <main class="main">
     <div class="content">
 
       <div class="roadmap">
         <h2>Roadmaps</h2>
-        <a href="#">DevOps</a>
-        <a href="#">Data Analytics</a>
-        <a href="#">Web Development</a>
-        <a href="#">Android Development</a>
+        <div class="icon-grid">
+          <a href="#">
+            <img src="assets/images/devops.png" alt="DevOps Roadmap">
+            <div class="overlay">
+              <span class="overlay-title">DevOps</span>
+            </div>
+          </a>
+          <a href="#">
+            <img src="assets/images/da.png" alt="Data Analytics Roadmap">
+            <div class="overlay">
+              <span class="overlay-title">Data Analytics</span>
+            </div>
+          </a>
+          <a href="#">
+            <img src="assets/images/wd.png" alt="Web Development Roadmap">
+            <div class="overlay">
+              <span class="overlay-title">Web Development</span>
+            </div>
+          </a>
+          <a href="#">
+            <img src="assets/images/ad.png" alt="Android Development Roadmap">
+            <div class="overlay">
+              <span class="overlay-title">Android Development</span>
+            </div>
+          </a>
+        </div>
       </div>
 
       <div class="course">
         <h2>Our Courses</h2>
-        <div class="course-grid">
-          <a href="https://cplusplus.com/doc/" target="_blank"><img src="assets/images/cpp.png" alt="C++ Logo"></a>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img
-              src="assets/images/js.png" alt="JavaScript Logo"></a>
-          <a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html" target="_blank"><img
-              src="assets/images/java.png" alt="Java Logo"></a>
-          <a href="https://git-scm.com/doc" target="_blank"><img src="assets/images/git.png" alt="Git Logo"></a>
-          <a href="https://www.python.org/doc/" target="_blank"><img src="assets/images/python.png"
-              alt="Python Logo"></a>
-          <a href="https://en.cppreference.com/w/" target="_blank"><img src="assets/images/c.png" alt="C Logo"></a>
+        <div class="icon-grid">
+          <a href="https://cplusplus.com/doc/" target="_blank">
+            <img src="assets/images/cpp.png" alt="C++ Logo">
+            <div class="overlay">
+              <span class="overlay-title">C++</span>
+            </div>
+          </a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+            <img src="assets/images/js.png" alt="JavaScript Logo">
+            <div class="overlay">
+              <span class="overlay-title">JavaScript</span>
+            </div>
+          </a>
+          <a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html" target="_blank">
+            <img src="assets/images/java.png" alt="Java Logo">
+            <div class="overlay">
+              <span class="overlay-title">Java</span>
+            </div>
+          </a>
+          <a href="https://git-scm.com/doc" target="_blank">
+            <img src="assets/images/git.png" alt="Git Logo">
+            <div class="overlay">
+              <span class="overlay-title">Git</span>
+            </div>
+          </a>
+          <a href="https://www.python.org/doc/" target="_blank">
+            <img src="assets/images/python.png" alt="Python Logo">
+            <div class="overlay">
+              <span class="overlay-title">Python</span>
+            </div>
+          </a>
+          <a href="https://en.cppreference.com/w/" target="_blank">
+            <img src="assets/images/c.png" alt="C Logo">
+            <div class="overlay">
+              <span class="overlay-title">C</span>
+            </div>
+          </a>
         </div>
       </div>
 
     </div>
   </main>
+
+  <section class="locked-features">
+  <h2 class="section-title">Explore Our Core Features</h2>
+  <div class="features-grid">
+
+    <div class="feature-item locked" onclick="toggleLogin()">
+      <i class="fas fa-code"></i>
+      <h3>Online Code Judge</h3>
+      <p>Solve problems and get instant feedback by running your code against test cases.</p>
+    </div>
+
+    <div class="feature-item locked" onclick="toggleLogin()">
+      <i class="fas fa-archive"></i>
+      <h3>Problem Archive</h3>
+      <p>Access a huge library of problems categorized by topic and difficulty level.</p>
+    </div>
+
+    <div class="feature-item locked" onclick="toggleLogin()">
+      <i class="fas fa-trophy"></i>
+      <h3>Coding Contests</h3>
+      <p>Compete with others in regular coding contests to climb the leaderboard.</p>
+    </div>
+
+    <div class="feature-item locked" onclick="toggleLogin()">
+      <i class="fas fa-briefcase"></i>
+      <h3>Job Board</h3>
+      <p>Find and apply for exclusive job and internship opportunities from top companies.</p>
+    </div>
+
+     <div class="feature-item locked" onclick="toggleLogin()">
+      <i class="fas fa-robot"></i>
+      <h3>AI Mock Interviewer</h3>
+      <p>Practice technical and behavioral interviews with an AI and get instant feedback.</p>
+    </div>
+
+    <div class="feature-item locked" onclick="toggleLogin()">
+      <i class="fas fa-certificate"></i>
+      <h3>Skill Assessments</h3>
+      <p>Prove your skills by passing standardized tests and earn verifiable certificates.</p>
+    </div>
+
+  </div>
+</section>
 
   <!-- Footer -->
   <footer>
