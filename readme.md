@@ -37,7 +37,7 @@ Our vision is to make coding **fun, social, and accessible** for students everyw
    ```bash
    git clone https://github.com/your-username/campuscode.git
    cd campuscode
-```
+
 2.Open the project
     Just open index.html in your browser to preview the site.
 
@@ -49,4 +49,4 @@ Our vision is to make coding **fun, social, and accessible** for students everyw
 
    Commit changes 💡
 
-    Make a pull request 🚀
+   Make a pull request 🚀
