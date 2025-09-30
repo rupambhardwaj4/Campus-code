@@ -49,15 +49,14 @@ Our vision is to make coding **fun, social, and accessible** for students everyw
     Just open index.html in your browser to preview the site.
 
 
-- Fork the repo 🍴
+3- Fork the repo 🍴
 
-- Create a branch 🌱
+4- Create a branch 🌱
 
-- Commit changes 💡
+5- Commit changes 💡
 
+6- Make a pull request 🚀
 
-- Make a pull request 🚀
+7-Commit changes 💡
 
-Commit changes 💡
-
-  Make a pull request 🚀
+8-Make a pull request 🚀
